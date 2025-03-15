@@ -1,148 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titre de site </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Découvrez mon portfolio avec des projets créatifs et des photographies de haute qualité.">
+        <link rel="icon" type="image/x-icon" class="favicon" href="images/index/site-favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" as="image" href="images/index/portrait-artiste.webp" type="image/webp">
 
-  
-</head>
+
+        <title> Alban Kevin </title>
+
+    
+    </head>
 
 
-<body>
-    <header>
-        
-        <nav>
+    <body>
+
+        <header class="header-home">
+
             <!-- la barre de navigation -->
-            <a href="/index.html"><img src="logo" alt="Logo du site ...." width="10vw"></a>
-            <a href="/portfolio.html" target="_blank">Portfolio</a>
-            <a href="/a-propos.html" target="_blank">A propos </a>
-            <a href="/contact.html" target="_blank">Contact</a>
-
-                <!-- Formulaire de recherche -->
-            <form action="search.html" method="GET" class="search-form">
-                <input type="text" name="q" placeholder="Rechercher..." class="search-input">
-                <button type="submit" class="search-btn"> 🔍</button>
-            </form>
-
-            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque rem dicta dolor commodi non, quod fugiat, aspernatur in ipsum voluptatum laudantium doloribus, molestiae eius fugit! A animi cumque quos!</h1>
+            <div class="logo">
+                <a href="/index.html" aria-label="Accueil">
+                    <img src="images/index/web-log.svg" alt="Logo site" data-no-picture>
+                </a>
     
-        </nav>
-
+            </div>
     
-    </header>
-
-    <aside>
-
-
-    </aside>
-    <main>
-        
-            <article>
-
-                <img src="" alt="fond d'ecran portrait de l’artiste ou une œuvre pharee ">
-                <h2>Chaque couleur raconte une histoire</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officia, fuga magni recusandae laboriosam blanditiis eligendi nemo iure? Sunt accusamus laborum numquam voluptate in sint dignissimos qui magnam quis consequuntur.
-                </p>
-        
-            </article>
-             
-           
-
-            <section>
-
-                <h2> Aperçu du Portfolio </h2>
-                <h2> Un Aperçu sur nos meilleures ouvres </h2>
-
-                <ul>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-
-                <a href="" class=""> Voir tout le portfolio </a>
-
-
-            </section>
-
-            <article>
-                <h2>Ce que je fais (Services & Collaborations)</h2>
-                <p>
-                    Explication des services proposés (commandes personnalisées, expositions, illustrations pour clients, etc.)
-                </p>
-            </article>
-
-            <section>
-
-                <h2> Témoignages et Statistiques
-                </h2>
-                <p> Avis de clients, collectionneurs, partenaires  - Statistiques clés (ex: 100+ œuvres créées, 20 expositions, 5 pays visités)</p>
-            </section>
-           
-
-
-        </article>
-
-
-        
-        
-
-
-
-
-
-
-    </main>
+            <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+            
+            <nav class="navigation-bar">
+                <a href="/portfolio.html">PORTFOLIO</a>
+                <a href="/apropos.html">APROPOS</a>
+                <a href="/contact.html">CONTACT</a>
     
-    <footer class="footer">
+            </nav>
+            
+            <div class="search-form">
+                <button type="button" aria-label="Rechercher">🔍</button>
+                <input type="text" id="search-input" placeholder="RECHERCHER" aria-label="Rechercher">
+                
+            </div>
         
-        <div class="newsletter">
-            <!-- Inscription Newsletter -->
-            <h3>
-                nous suivre a travers nos ouvres et nos futur projets 
-            </h3>
-            <form action="#" method="post">
-                <input type="email" name="email" placeholder="Votre email ici" required>
-                <button type="submit"> Envoyer</button>
-            </form>
 
-            <!-- Partie Contact -->
-             <div class="contact">
-                <h3>Contact</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, molestias! Explicabo quam quasi iure reiciendis! Inventore quas, sint consequatur architecto quasi quos odio libero similique est nemo ratione fuga in? <br> ville <br> code ville</p>
+        </header>
+        
 
-                <p><a href="mailto: email"></a>email direct</p>
-
-
-             </div>
-
-
-
-            <!-- Liens Utiles-->
-
-            <div class="lien">
-                <ul>
-                    <li><a href="/portfolio.html" target="_blank">Portfolio</a></li>
-                    <li><a href="/a-propos.html" target="_blank">A propos </a></li>
-                    <li><a href="/contact.html" target="_blank">Contact</a></li>
+        <main>
          
+            <!-- Introduction de l'artiste  -->
+
+            <article class=" presentation" >
+                <div class=" introduction ">
+                    <h1>Chaque couleur <br><span>raconte une histoire</span></h1> 
+                    <h2>Introduction</h2>
+                    <p>
+                        Je suis Alban Kevin, photographe passionné spécialisé dans les portraits et la photographie urbaine. Mon objectif est de capturer des moments authentiques et de révéler la beauté cachée du quotidien.
+                    </p>
+                
+
+                    <a href="portfolio.html" class="button" aria-label="Voir les projets du portfolio">Voir mon travail</a>
+
+                </div>
+                
+                <img src="images/index/portrait-artiste.webp" alt=" portrait de l’artiste ">
+
+            </article>
+
+          
+
+
+            <div class="scrolling-text-container">
+                <p id="scrolling-text">
+                    📸 Toutes vos envies en image ! Mariages, événements, portraits ... Nous réalisons votre projet photo sur-mesure. Contactez-nous !
+                </p>
+            </div>
+            
+        
+            <section class="realisation"> 
+                <h2>Mon univers photographique captivant</h2>
+                <div class="realisation-grid">
+                    <div class="realisation-box">
                     
-                </ul>
+                        <img src="images/index/portrait-acceuil.webp" alt="portrait">
+
+                        <div class="description">
+                            <h3>Portraits</h3>
+                            <a href="portfolio.html#anchor-portrait" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
+                        </div>
+
+                    </div>
+                    <div class="realisation-box">
+                        <img src="images/index/voyage-acceuil.webp" alt="portrait">
+                        <div class="description">
+                            <h3>Photographie de voyage</h3>
+                            <a href="portfolio.html#anchor-trip" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
+                        </div>
+                    </div>
+                    <div class="realisation-box">
+                        <img src="images/index/mode-acceuil.webp" alt="portrait">
+                        <div class="description">
+                            <h3>Mode & Editorial</h3>
+                            <a href="portfolio.html#anchor-editorial" aria-label="Voir les détails des portraits">VOIR EN DETAIL→</a>
+                        </div>
+                    </div>
+                    
+                    <div class="realisation-box">
+                        <img src="images/index/reportage-acceuil.webp" alt="portrait">
+                        <div class="description">
+                            <h3>Reportages / événements</h3>
+                            <a href="portfolio.html#anchor-event" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+        
+            <!-- <section>
+
+                <h2> Statistiques</h2>
+                <p>  collectionneurs, partenaires  - Statistiques clés (ex: 100+ œuvres créées, 20 expositions, 5 pays visités)</p>
+            </section> -->
+
+
+            <section class="overview-portfolio">
+                <h2>Un Aperçu sur nos meilleures œuvres</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="images/index/portrait.webp" alt="Portrait d'une fille"></div>
+                        <div class="slide"><img src="images/index/mariage.webp" alt="Ladie marriage"></div>
+                        <div class="slide"><img src="images/index/voyage.webp" alt="Man standing in nature"></div>
+                        <div class="slide"><img src="images/index/paysage-urbain.webp" alt="Paysage urbain"></div>
+                        <div class="slide"><img src="images/index/marriage-2.webp" alt="Man standing in nature"></div>
+                        <div class="slide"><img src="images/index/shooting.webp" alt="Paysage urbain"></div>
+                    </div>
+                </div>
+                <div class="dots">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                    <span class="dot" data-index="5"></span>
+                </div>
+            </section>
+
+
+
+            <section class="publications-collaborations"><!-- ****** ajouter style grid or display row au tableau --> <!-- Articles & Parutions -->
+        
+                <h2> Publications & Collaborations</h2>
+            
+                <div class="publications" >
+                    <span class="year">2024</span>
+                    <span class="role">Reportage sur la faune sauvage en Afrique</span>
+                    <span class="title">National Geographic</span>
+                    
+                </div>
+            
+                <div class="publications">
+                    <span class="year">2023</span>
+                    <span class="role">Série mode : "L’élégance à travers l’objectif"</span>
+                    <span class="title">Vogue</span>
+                    
+                </div>
+            
+                <div class="publications">
+                    <span class="year">2022</span>
+                    <span class="role">Photoreportage : "Les visages de la modernité urbaine"</span>
+                    <span class="title">Le Monde</span>
+                    
+                </div>
+            
+                <div class="publications">
+                    <span class="year">2021</span>
+                    <span class="role">Essai visuel : "Les couleurs de l'Asie"</span>
+                    <span class="title">The Guardian</span>
+                    
+                </div>
+            
+                <div class="publications">
+                    <span class="year">2020</span>
+                    <span class="role">Couverture spéciale sur le changement climatique</span>
+                    <span class="title">Time Magazine</span>
+                    
+                </div>
+            
+                
+
+            </section>
+
+            <div class="presentation-video">
+                <video id="video" class="presentation" controls width="800" height="450" loading="lazy" poster="video/video-mariage-poster.jpg">
+                    <source src="video/video-mariage.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de cette vidéo.
+                </video>
+                <button class="play-button" data-video="video"></button>
 
             </div>
+            
+              
 
+           
 
+            <table class="collaboration-table">
 
-
-        </div>
+                <caption> Collaborations </caption> 
         
-    </footer>
+                <tr>
+                    <td>📷 Nikon</td>
+                    <td>Ambassadeur officiel, test de nouveaux objectifs</td>
+                </tr>
+                <tr>
+                    <td>📸 Canon</td>
+                    <td>Campagne "Capture the Moment"</td>
+                </tr>
+                <tr>
+                    <td>🎞️ Fujifilm</td>
+                    <td>Création d’une série documentaire en argentique</td>
+                </tr>
+                <tr>
+                    <td>🏔️ The North Face</td>
+                    <td>Expéditions photo en haute montagne</td>
+                </tr>
+                <tr>
+                    <td>🚀 SpaceX</td>
+                    <td>Projet spécial : "La photographie au-delà de la Terre"</td>
+                </tr>
+                
+            </table>
+            
+            
+
+          
+
+            <section class="talk-with-us"> <!-- ****CSS --> <!-- interaction / liens vers le contact -->
+                <h2> Créons quelque chose de grand !</h2>
+                <p> Nous vous faisons passer de la réalité d'aujourd'hui au potentiel de demain </p>
+                <a href="contact.html" class="button">Nous parler de votre projet</a>
+            </section>
 
 
+
+        </main>
+        
+        <footer class="footer">
+            <div class=" footer-top">
+                <div class="newsletter-contact">
+                    <div class="newsletter">
+                        <!-- Inscription Newsletter -->
+                        <h3> Nous suivre a travers nos ouvres et nos futures projets </h3>
+
+                        <form action="#" method="post">
+                           
+                            <input type="email" id="email-newsletter" name="email"  placeholder="Votre email ici" aria-label="Votre email" required autocomplete="email">
+                            <button type="submit" class="arrow-button"> &#8599;</button><br>
+                        </form>
+                        
+                        <p> Rejoignez ma communauté et plongez dans mon univers visuel. Soyez informé(e) de mes nouvelles séries photographiques, expositions et inspirations.</p>  
+                    </div>
+            
+            
+                    <div class="contact"> <!-- Partie Contact --> <!-- ************ a voir si modification mail -->
+                        <h3>Contact</h3>
+                        <p> 16 rue Ile de Napoleon <br>
+                            +33 6 17 02 64 97 
+                        <p> 
+            
+                            <a href="mailto:medfc@yahoo.fr" aria-label="Envoyer un email">medfc@yahoo.fr</a>
+                        
+            
+                    </div>
+
+                </div>
+            
+        
+                <aside class="links"> <!-- Liens Utiles-->
+                    <h3>Liens</h3>
+                    <ul>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/apropos.html">A propos </a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </aside>
+
+            </div>
+            
+            
+
+            <hr class="footer-line"> <!-- ligne horizontale -->
+
+            <div class="footer-bottom">  <!-- ****a modifier la taille et css -->
+
+                <p> Copyright &copy; 2025 Alban Kevin</p>
+                <div class="icone-footer-bottom">
+                    <a href="https://www.facebook.com" aria-label="Page Facebook"><img src="images/index/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" aria-label="Page Instagram" ><img src="images/index/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/?mx=2" aria-label="Page Twitter" ><img src="images/index/twitter.png" alt="Twitter"></a>
+                    <a href="https://dribbble.com" aria-label="Page dribbble"><img src="images/index/reseau-social.png" alt="Dribbble"></a>
+                </div>
+                
+            </div>
 
     
-</body>
+        </footer>
+
+        
+    <script src="script.js"></script>
+    
+
+        
+    </body>
 </html>
