@@ -4,54 +4,57 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Découvrez mon portfolio avec des projets créatifs et des photographies de haute qualité.">
+        <meta name="description" content="Explorez le portfolio d'Alban Kevin, photographe passionné. Découvrez des portraits captivants, des voyages inoubliables et des photographies éditoriales d'exception.">
         <link rel="icon" type="image/x-icon" class="favicon" href="images/index/site-favicon.ico">
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap"></noscript>
         <link rel="preload" as="image" href="images/index/portrait-artiste.webp" type="image/webp">
 
-
-        <title> Alban Kevin </title>
+        <title>Accueil | Alban Kevin - Photographe Portrait, Mariage & Événementiel</title>
 
     
     </head>
 
 
     <body>
-
+         <!-- Header -->
         <header class="header-home">
 
-            <!-- la barre de navigation -->
+          <!-- Le logo -->
             <div class="logo">
                 <a href="/index.html" aria-label="Accueil">
                     <img src="images/index/web-log.svg" alt="Logo site" data-no-picture>
                 </a>
-    
             </div>
-    
-            <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-            
+        
+
+            <!-- Bouton menu burger pour mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" role="button">&#9776;</button>
+
+             <!-- Menu de navigation -->
             <nav class="navigation-bar">
+                <a href="/index.html">ACCUEIL</a>
                 <a href="/portfolio.html">PORTFOLIO</a>
                 <a href="/apropos.html">APROPOS</a>
                 <a href="/contact.html">CONTACT</a>
-    
             </nav>
-            
+
+             <!-- Barre de recherche -->
             <div class="search-form">
-                <button type="button" aria-label="Rechercher">🔍</button>
-                <input type="text" id="search-input" placeholder="RECHERCHER" aria-label="Rechercher">
-                
+                <label for="search-input" class="visually-hidden">Rechercher</label>
+                <input type="text" id="search-input" placeholder="🔍 RECHERCHER" aria-label="Rechercher">
+            
             </div>
         
 
         </header>
         
+      
 
         <main>
          
-            <!-- Introduction de l'artiste  -->
-
+             <!-- Section présentation -->
             <article class=" presentation" >
                 <div class=" introduction ">
                     <h1>Chaque couleur <br><span>raconte une histoire</span></h1> 
@@ -64,41 +67,45 @@
                     <a href="portfolio.html" class="button" aria-label="Voir les projets du portfolio">Voir mon travail</a>
 
                 </div>
-                
+
+                <!-- Image du photographe en introduction -->
                 <img src="images/index/portrait-artiste.webp" alt=" portrait de l’artiste ">
 
             </article>
 
           
 
-
+            <!-- Section texte défilant -->
             <div class="scrolling-text-container">
                 <p id="scrolling-text">
                     📸 Toutes vos envies en image ! Mariages, événements, portraits ... Nous réalisons votre projet photo sur-mesure. Contactez-nous !
                 </p>
             </div>
             
-        
+           <!-- Section de réalisation -->
             <section class="realisation"> 
                 <h2>Mon univers photographique captivant</h2>
                 <div class="realisation-grid">
+
+                    <!-- Bloc de réalisation 1 - Portraits -->
                     <div class="realisation-box">
                     
                         <img src="images/index/portrait-acceuil.webp" alt="portrait">
-
                         <div class="description">
                             <h3>Portraits</h3>
                             <a href="portfolio.html#anchor-portrait" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
                         </div>
 
                     </div>
+                    <!-- Bloc de réalisation 2 - Voyage -->
                     <div class="realisation-box">
                         <img src="images/index/voyage-acceuil.webp" alt="portrait">
                         <div class="description">
-                            <h3>Photographie de voyage</h3>
+                            <h3>Villes & voyage</h3>
                             <a href="portfolio.html#anchor-trip" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
                         </div>
                     </div>
+                    <!-- Bloc de réalisation 3 - Editorial-->
                     <div class="realisation-box">
                         <img src="images/index/mode-acceuil.webp" alt="portrait">
                         <div class="description">
@@ -106,11 +113,11 @@
                             <a href="portfolio.html#anchor-editorial" aria-label="Voir les détails des portraits">VOIR EN DETAIL→</a>
                         </div>
                     </div>
-                    
+                    <!-- Bloc de réalisation 4 - Evénements -->
                     <div class="realisation-box">
                         <img src="images/index/reportage-acceuil.webp" alt="portrait">
                         <div class="description">
-                            <h3>Reportages / événements</h3>
+                            <h3>Reportages & Evénements</h3>
                             <a href="portfolio.html#anchor-event" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
                         </div>
                     </div>
@@ -118,24 +125,17 @@
                 </div>
             </section>
 
-        
-            <!-- <section>
-
-                <h2> Statistiques</h2>
-                <p>  collectionneurs, partenaires  - Statistiques clés (ex: 100+ œuvres créées, 20 expositions, 5 pays visités)</p>
-            </section> -->
-
-
+              <!-- Aperçu sur les realisations dans un slider -->
             <section class="overview-portfolio">
-                <h2>Un Aperçu sur nos meilleures œuvres</h2>
+                <h2>UnAperçu sur nos meilleures œuvres </h2>
                 <div class="slider-container">
                     <div class="slider">
-                        <div class="slide"><img src="images/index/portrait.webp" alt="Portrait d'une fille"></div>
-                        <div class="slide"><img src="images/index/mariage.webp" alt="Ladie marriage"></div>
-                        <div class="slide"><img src="images/index/voyage.webp" alt="Man standing in nature"></div>
-                        <div class="slide"><img src="images/index/paysage-urbain.webp" alt="Paysage urbain"></div>
-                        <div class="slide"><img src="images/index/marriage-2.webp" alt="Man standing in nature"></div>
-                        <div class="slide"><img src="images/index/shooting.webp" alt="Paysage urbain"></div>
+                        <div class="slide"><img src="images/index/portrait.webp" alt="Portrait d'une jeune femme"></div>
+                        <div class="slide"><img src="images/index/mariage.webp" alt="Mariée souriante"></div>
+                        <div class="slide"><img src="images/index/voyage.webp" alt="Homme debout dans la nature"></div>
+                        <div class="slide"><img src="images/index/paysage-urbain.webp" alt="Vue d'un paysage urbain"></div>
+                        <div class="slide"><img src="images/index/marriage-2.webp" alt="Marié posant devant la nature"></div>
+                        <div class="slide"><img src="images/index/shooting.webp" alt="Séance photo en extérieur"></div>
                     </div>
                 </div>
                 <div class="dots">
@@ -149,8 +149,8 @@
             </section>
 
 
-
-            <section class="publications-collaborations"><!-- ****** ajouter style grid or display row au tableau --> <!-- Articles & Parutions -->
+             <!-- Partie publications-collaborations -->
+            <section class="publications-collaborations">
         
                 <h2> Publications & Collaborations</h2>
             
@@ -193,19 +193,22 @@
 
             </section>
 
-            <div class="presentation-video">
+
+             <!-- Section video -->
+             <div class="presentation-video">
                 <video id="video" class="presentation" controls width="800" height="450" loading="lazy" poster="video/video-mariage-poster.jpg">
                     <source src="video/video-mariage.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de cette vidéo.
                 </video>
-                <button class="play-button" data-video="video"></button>
-
-            </div>
+                <button class="play-button" aria-label="Lire la vidéo" data-video="video">
+                    <span class="sr-only">Lire la vidéo</span>
+                </button>
+            </div>  
             
               
 
            
-
+            <!-- les collaborations -->
             <table class="collaboration-table">
 
                 <caption> Collaborations </caption> 
@@ -236,8 +239,8 @@
             
 
           
-
-            <section class="talk-with-us"> <!-- ****CSS --> <!-- interaction / liens vers le contact -->
+            <!-- rentrer en contact avec nous  -->
+            <section class="talk-with-us"> 
                 <h2> Créons quelque chose de grand !</h2>
                 <p> Nous vous faisons passer de la réalité d'aujourd'hui au potentiel de demain </p>
                 <a href="contact.html" class="button">Nous parler de votre projet</a>
@@ -246,12 +249,17 @@
 
 
         </main>
-        
+
+
+
+        <!-- FOOTER  -->
         <footer class="footer">
             <div class=" footer-top">
+
+                <!-- Partie newsletter / adresse / liens -->
                 <div class="newsletter-contact">
                     <div class="newsletter">
-                        <!-- Inscription Newsletter -->
+                        
                         <h3> Nous suivre a travers nos ouvres et nos futures projets </h3>
 
                         <form action="#" method="post">
@@ -264,7 +272,7 @@
                     </div>
             
             
-                    <div class="contact"> <!-- Partie Contact --> <!-- ************ a voir si modification mail -->
+                    <div class="contact"> 
                         <h3>Contact</h3>
                         <p> 16 rue Ile de Napoleon <br>
                             +33 6 17 02 64 97 
@@ -277,8 +285,8 @@
 
                 </div>
             
-        
-                <aside class="links"> <!-- Liens Utiles-->
+                 <!-- ligne de navigation -->  
+                <aside class="links"> 
                     <h3>Liens</h3>
                     <ul>
                         <li><a href="/portfolio.html">Portfolio</a></li>
@@ -288,12 +296,10 @@
                 </aside>
 
             </div>
-            
-            
+            <!-- ligne horizontale -->
+            <hr class="footer-line"> 
 
-            <hr class="footer-line"> <!-- ligne horizontale -->
-
-            <div class="footer-bottom">  <!-- ****a modifier la taille et css -->
+            <div class="footer-bottom">  
 
                 <p> Copyright &copy; 2025 Alban Kevin</p>
                 <div class="icone-footer-bottom">
@@ -308,7 +314,7 @@
     
         </footer>
 
-        
+    <!-- Inclusion du fichier JS-->
     <script src="script.js"></script>
     
 

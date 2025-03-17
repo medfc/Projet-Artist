@@ -1,6 +1,5 @@
 
 body {
-  
     font-family: 'Poppins','Montserrat', Arial, sans-serif;
     color: black;
     margin: 0;
@@ -9,14 +8,13 @@ body {
     font-size: 1rem;    
     overflow-x: hidden; 
     max-width: 100%;
-    position: relative; /* Évite que des éléments absolus débordent */
-    
-    
+    position: relative; 
     
 
-    
 }
 
+
+/* PAGE HOME  */
 h1 {
     font-size: 2.8rem;
     font-weight: bold;
@@ -43,15 +41,11 @@ h4 {
 }
 
 
-
-
 .favicon{
     width: 32px;
     border-radius: 50%;
     overflow: hidden;
 }
-
-
 
 
 header {
@@ -66,39 +60,37 @@ header {
     position: sticky;
     top:0;
     z-index: 10;
-    gap:100px;
-
-
-
+    gap:60px;
+    
 }
 
-.header-rest {
-    gap:70px;
- 
-
-
-}
 
 
 .header-home {
     background-color: black;
-    
-    
-
 }
 
 
 
 header a {
-
     color: white;
     font-weight: bold;
     text-decoration: none;
-    
-   
 
-    
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .menu-button {
     background: none;
     border: none;
@@ -110,14 +102,12 @@ header a {
     display: none; 
 }
 
-
 .logo img {
     width: 50px;
     height: auto;
     border-radius: 10px;
     background-color: white;
 }
-
 
 .navigation-bar {
 
@@ -126,11 +116,9 @@ header a {
     gap:40px;
     padding-left: 200px;
   
-
 }
 
-
-.navigation-bar a:hover {
+.navigation-bar a:hover , .navigation-bar a.active{
     
     transform: translateY(-5px);
     transition: transform 0.3s ease-in-out;
@@ -139,6 +127,7 @@ header a {
 
 }
 
+/* Pour la partie responsive */
 .menu-toggle {
     display: none;
     font-size: 30px;
@@ -147,14 +136,6 @@ header a {
     cursor: pointer;
 }
 
-
-.search-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:0px;
-
-}
 
 .search-form input  {
     padding: 10px;
@@ -165,12 +146,9 @@ header a {
     border: 1px solid #ccc;
     border:none;
     color: white;
-    width:200px;
-   
-
-
+    width: 200px;
+    
 }
-
 
 .search-form ::placeholder {
     color: white;
@@ -179,25 +157,10 @@ header a {
 
 
 
-.search-form button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.search-form input ::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-
-
 
 
 
 /* Partie presentation */
-
 
 .presentation {
   
@@ -213,10 +176,6 @@ header a {
     flex-wrap: wrap;
     padding-bottom: 20px;
 
-   
-
-   
-
 
 }
 
@@ -229,8 +188,6 @@ header a {
    
 }
 
-
-
 .introduction {
     display: flex;
     flex-direction: column;
@@ -239,8 +196,6 @@ header a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  
-
 
 }
 
@@ -251,16 +206,12 @@ header a {
     line-height: 1.2em;
     margin-bottom: 10px;
    
-    
-
-    
 }   
 
 .introduction span {
     margin-left: 100px;
 
 }
-
 
 
 .introduction p {
@@ -270,14 +221,12 @@ header a {
     text-align: left;
     font-size: 1.2rem;
     text-align: justify;
-
-
-    
+   
 }
 
 .introduction .button, .talk-with-us .button{
 
-    background-color: chartreuse;
+    background-color: rgb(26, 26, 208);
     color: white;
     font-size: 1rem;
     font-weight: bold;
@@ -324,11 +273,6 @@ header a {
 }
 
 
-
-
-
-
-
 /* Partie Realisation */
 
 .realisation {
@@ -336,8 +280,6 @@ header a {
     flex-direction: column;
     align-items: center;
     background-color:white;
-    
-  
     
   }
   
@@ -349,7 +291,6 @@ header a {
     width: 70%;
     margin-bottom: 80px;
     
-
 } 
 
 .realisation h2 {
@@ -367,7 +308,6 @@ header a {
     cursor: pointer;
     
 
-
 }
 
 .realisation-box img {
@@ -376,11 +316,6 @@ header a {
     object-fit: cover;
 
 }
-
-
-
-
-
 
 .description {
 position: absolute;
@@ -394,7 +329,7 @@ transition: color 0.3s;
 background: rgba(0, 0, 0, 0.6);
 padding-bottom: 20px;
 padding-left: 10px;
-
+flex-wrap: wrap;
 
 }
 
@@ -404,16 +339,16 @@ padding-left: 10px;
     font-weight: 800;
     color:white;
     
-
-
 }
-
-
+.description h3 {
+   
+    word-break: break-word;
+    
+}
 
 .description a:hover{
     color: blue;
     
-
 }
 
 .realisation-box:hover {
@@ -422,8 +357,6 @@ padding-left: 10px;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 8px 1rem rgba( 0, 0, 0, 0.3);
 }
-
-
 
 
 .overview-portfolio {
@@ -446,6 +379,7 @@ padding-left: 10px;
     color: white
 }
 
+/* Partie slider */
 .slider-container {
     position: relative;
     width: 40%;
@@ -454,7 +388,6 @@ padding-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 
 }
 
@@ -474,17 +407,15 @@ padding-left: 10px;
  
 }
 
-/* 🌟 Toutes les images du carrousel sont grisées par défaut */
 .slide img {
     width: 55%;
     height: 100%;
     object-fit: cover;
-    cursor: pointer; /* Ajoute un effet indiquant qu'on peut interagir */
+    cursor: pointer; 
 }
 
 
 
-/* 🌟 Fond noir semi-transparent derrière l’image agrandie */
 .overlay {
     position: fixed;
     top: 0;
@@ -498,7 +429,7 @@ padding-left: 10px;
     align-items: center;
 }
 
-/* 🌟 Image agrandie au centre */
+
 .fullscreen {
     max-width: 90%;
     max-height: 90%;
@@ -506,8 +437,6 @@ padding-left: 10px;
     border-radius: 10px;
     display: none;
 }
-
-
 
 
 .dots {
@@ -530,12 +459,7 @@ padding-left: 10px;
 
 }
 
-
-
-
-
-
-
+/* Partie collaboration  */
 .publications-collaborations {
 
     
@@ -543,7 +467,6 @@ padding-left: 10px;
     margin-bottom: 90px;
    
 }
-
 
 .publications-collaborations h2 {
 
@@ -559,8 +482,7 @@ padding-left: 10px;
     align-items: center;
     justify-content: space-between;
     border-top: 2px solid black;
-    padding: 30px 0;
-    
+    padding: 30px 0;  
     
 }
 
@@ -592,14 +514,6 @@ padding-left: 10px;
     font-weight: bold;
     
 }
-
-
-
-
-
-
-
-
 
 
 /* Video */
@@ -654,8 +568,6 @@ padding-left: 10px;
 
 /* Tableau de colaboration */
 
-
-
 .collaboration-table {
     
     display: flex;
@@ -664,7 +576,6 @@ padding-left: 10px;
     border-collapse: collapse;
     gap: 40px;
     margin-bottom: 80px;
-
 
 }
 
@@ -687,9 +598,7 @@ padding-left: 10px;
 }
 
 
-
-/* Parle du projet client */
-
+/* Parler du projet client */
 .talk-with-us {
     display: flex;
     flex-direction: column;
@@ -701,19 +610,7 @@ padding-left: 10px;
     padding:70px 0px;
     gap:20px
     
-
-
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -738,16 +635,13 @@ footer {
     padding-bottom: 40px;
     gap: 40%;
    
-  
-
 }
 
 .newsletter-contact {
     display: flex;
     flex-direction: column;
     width: 40%;
-    
-    
+      
 }
 
 
@@ -761,8 +655,6 @@ footer {
     border-bottom:  2px solid black;
     width:100%;
     position: relative;
-
-
 
 }
 
@@ -790,8 +682,6 @@ footer {
     color: #666;
     text-align: justify;
 }
-
-
 
 .contact p, .links ul {
     color: #444;
@@ -829,21 +719,12 @@ footer {
     color: blue;
 }
 
-
-
-
-
-
-
 .footer-line {
 
     background-color:black;
     margin: 0px 20px 
 
 }
-
-
-
 
 .footer-bottom {
 
@@ -855,15 +736,12 @@ footer {
 }
 
 
-
-
 .icone-footer-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
-
 
 .icone-footer-bottom img {
     width:40px;
@@ -878,18 +756,17 @@ footer {
 
 /* PAGE PORTFOLIO CSS */
 
-.header-rest, .header-contact{
-    background-color: white;
 
-}
 
-.header-rest .navigation-bar a , .header-contact .navigation-bar a{
-    margin-right: 45px;
-}
 
-.header-rest a , .header-contact a  {
+
+.header-rest a {
 
     color: black;
+}
+
+header.header-rest{
+ background-color: white;
 }
 
 .work-with-me {
@@ -899,9 +776,28 @@ footer {
     white-space: nowrap;    
     font-weight: bold;
     background-color: black;
+    border-radius: 5px;
     padding:10px;
+    text-align: center;
     cursor: pointer;
+    width:200px;
     
+}
+
+
+
+.search-form input  {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border:none;
+    color: white;
+    width: 200px;
+    
+
 }
 .work-with-me a {
     color: #fcfcfc;
@@ -925,7 +821,6 @@ footer {
     margin-bottom: 80px;
 }
 
-
 #portfolio-banner {
     background-image: url(images/portfolio/portfolio-img.webp);
 }
@@ -936,8 +831,6 @@ footer {
 }
 
 
-
- 
 .portfolio-total {
     display: flex;
     flex-direction: column;
@@ -973,8 +866,13 @@ footer {
 
 .portfolio-container p {
     text-align: justify;
+    margin-top: 0;
 }
 
+.portfolio-container h4 {
+    margin: 0;
+   
+}
 
 .video-container {
     position: relative;
@@ -1043,18 +941,7 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* page de contact */
+/* PAGE DE CONTACT*/
 
 
 #contact-banner {
@@ -1080,6 +967,7 @@ footer {
 .contact-box {
     width:100%;
     max-width:350px ;
+    min-width: 200px;
     background: #f5f5f5;
     padding: 20px;
     border-radius: 10px;
@@ -1092,20 +980,8 @@ footer {
 }
 .contact-box:nth-child(3) {
     grid-column: 1 / -1; /* La 3e boîte prend toute la largeur */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Assure que la boîte ne se rétrécit pas */
-    max-width: 350px; /* Pour qu'elle reste bien proportionnée */
-    margin: 0 auto; /* Centre la boîte correctement */
+    margin: 0 auto; 
 }
-
-
-
-
-
-
 
 
 .contact-box .icon {
@@ -1124,10 +1000,7 @@ footer {
 }
 
 
-
-
-
-/* 🔹 Carte & Formulaire */
+/* Carte & Formulaire */
 .map-form {
     display: flex;
     flex-direction: row;
@@ -1138,20 +1011,21 @@ footer {
     height: 600px;
     margin-bottom: 60px;
     background-color: #ffec00;
+    padding-bottom: 10px;
 
     
 }
+
 
 .map-container {
-    
-    min-width: 300px;
-    width: 40%;
-}
+    width:40%;
 
-.map-container iframe {
-    width: 90%;
-    height: 80%;
-    border: none;
+}
+.map-image {
+    width:  100%;
+    height: auto;
+    object-fit: cover;
+    min-width: 100px;
     
     
 }
@@ -1159,7 +1033,7 @@ footer {
 .form-container {
  
     width:60%;      
-    min-width: 300px;
+    min-width: 200px;
     background: #ffec00;
     display: flex;
     flex-direction: column;
@@ -1176,6 +1050,8 @@ footer {
 
 .form-container p {
     padding: 0px 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -1236,35 +1112,32 @@ footer {
 
 .apropos-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     text-align: center;
     max-width: 80%;
-    margin-bottom: 40px;
     margin: auto;
+    margin-bottom: 40px;
+    justify-content: center;
 }
 
 .apropos-container .box {
-    flex: 1;
+    flex: 1 1 300px;
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.apropos-container .box h2 {
-
-    color: #333;
-    margin-bottom: 10px;
+  
 }
 
 .apropos-container .box h3 {
     font-size: 2rem;
     color: #000;
-    margin-bottom: 10px;
+    
 }
 
-.apropos-container .box p {
-    font-size: 1rem;
+
+.apropos-container .box p, .key-figures .stats p {
     color: #666;
 }
 
@@ -1279,31 +1152,18 @@ footer {
     margin: 40px auto;
 }
 
-.key-figures h2 {
-
-    margin-bottom: 20px;
-}
-
 .key-figures .stats {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .key-figures .stats div {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 0px 10px;
-}
-
-.key-figures .stats h3 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.key-figures.stats p {
-    font-size: 1rem;
-    color: #666;
-    
+    padding: 10px;
+    flex: 1 1 150px;
 }
 
 /* Section Expositions et Événements */
@@ -1317,11 +1177,6 @@ footer {
     margin: 40px auto;
 }
 
-.expositions h2 {
-
-    margin-bottom: 20px;
-}
-
 .expositions .event-list {
     display: flex;
     flex-direction: column;
@@ -1331,17 +1186,16 @@ footer {
 .expositions .event-list .event {
     background: rgb(104, 171, 92);
     border-radius: 8px;
+    padding: 15px;
 }
 
-.expositions .event-list .event h3 {
-    font-size: 2rem;
-    color: #000;
-}
 
-.expositions .event-list .event p {
-    font-size: 1rem;
-    color: #555;
-}
+
+
+
+
+
+
 
 
 
@@ -1363,10 +1217,6 @@ footer {
         font-size: 1.375rem;
     }
 
-
-    p {
-        font-size: 0.95rem;
-    }
     body {
         font-size: 0.95rem;
     }
@@ -1377,7 +1227,7 @@ footer {
         border: none;
         font-size: 50px;
         cursor: pointer;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
     
     .header-rest .menu-toggle {
@@ -1387,13 +1237,16 @@ footer {
         color: white;
     }
     
-    /* 🔹 STYLE PAR DÉFAUT POUR LE MENU */
+    .work-with-me {
+        font-size: 0.95rem;
+    }
+  
     .header-rest .navigation-bar {
         display: none; /* Caché par défaut */
         flex-direction: column;
         align-items: center;
         background: white;
-        width: 250px;  /* 🔹 Largeur uniforme */
+        width: 250px;  
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -1412,7 +1265,7 @@ footer {
         flex-direction: column;
         align-items: center;
         background: white;
-        width: 250px;  /* 🔹 Largeur uniforme */
+        width: 250px;  
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -1427,30 +1280,23 @@ footer {
 
   
     
-    /* 🔹 QUAND LE MENU EST OUVERT */
+    
    .navigation-bar.active {
         display: flex !important;
         opacity: 1;
-        transform: translateX(-50%) scale(1); /* 🔹 Empêche les bugs d'affichage */
+        transform: translateX(-50%) scale(1); 
     }
 
 
 
-    
-    /* 🔹 ASSURER LA MÊME LARGEUR SUR TOUTES LES PAGES */
+  
     .navigation-bar a {
-        width: 100%; /* 🔹 Largeur fixe pour éviter la différence entre les pages */
+        width: 100%; 
         text-align: center;
         padding: 10px 0;
         color: black;
         font-weight: bold;
     }
-    
-    
-    
-
- 
-
     
 
     header {
@@ -1518,7 +1364,7 @@ footer {
         
         text-align: center;
         margin: 20px;
-   
+
     }
 
     .introduction span {
@@ -1532,6 +1378,7 @@ footer {
 
     .introduction p{
         width:80%;
+        margin-bottom:20px;
     }
 
 
@@ -1561,14 +1408,13 @@ footer {
     padding: 0px 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 50px; /* Ajoute un espace clair entre les boxes */
+    gap: 50px; 
     justify-items: center;
     align-items: stretch; /* Garantit la même hauteur pour toutes */
     }
 
     .apropos-container > * {
     width: 100%;
-    /* Assure que toutes les boxes ont la même hauteur */
     max-width: 350px;
     display: flex;
     flex-direction: column;
@@ -1576,8 +1422,8 @@ footer {
     align-items: center;
     text-align: center;
     background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour la lisibilité */
-    border-radius: 10px; /* Coins arrondis pour un meilleur rendu */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
     padding: 20px;
     }
 
@@ -1597,28 +1443,24 @@ footer {
 
 
 
-
-
-
-
 @media (max-width: 768px) {
     
 
     h1 {
-        font-size: 1.9rem; /* ≈30px */
+        font-size: 2rem; 
     }
     h2 {
-        font-size: 1.6rem; /* ≈26px */
-        padding: 0px 5px;
+        font-size: 1.5rem;
+       
     }
     h3 {
-        font-size: 1.4rem; /* ≈22px */
+        font-size: 1.17rem;
     }
     h4 {
-        font-size: 1.2rem; /* ≈19px */
+        font-size: 1rem; 
     }
-    p {
-        font-size: 0.875rem; /* ≈16px */
+    body {
+        font-size: 0.875rem; 
        
     }
 
@@ -1627,14 +1469,30 @@ footer {
         padding: 10px 10px;
 
     }
+    .work-with-me {
+    font-size: 0.875rem;
+    }
 
-     
     .logo img {
-        width: 40px;
+        width: 30px;
 
     }
 
-        
+    .search-form input {
+        font-size: 0.875rem;
+    }
+
+    .menu-toggle {
+      
+        font-size: 35px;
+       
+    }
+    .logo img {
+        width: 35px;
+
+    }
+
+       
     .introduction .button, .talk-with-us .button{
 
         padding: 10px;
@@ -1644,10 +1502,8 @@ footer {
         white-space: nowrap;
     }
 
-
-
     .search-form input {
-        width: 110px;
+        width: 120px;
     }
 
     .publications{
@@ -1655,7 +1511,6 @@ footer {
         width: 80%;
         font-size: 0.9375rem;
    
-     
     } 
 
     .role {
@@ -1672,7 +1527,6 @@ footer {
         width: 80%;
        
     }
-
 
     .presentation {
 
@@ -1796,7 +1650,8 @@ footer {
         margin: 0px 10px;
     }
 
-   
+
+
 
     .map-form {
 
@@ -1824,8 +1679,7 @@ footer {
     .form-container  {
         width: 100%;
         padding-bottom: 20px;
-    }    
-
+    }  
 
     .header-rest {
     gap:70px;
@@ -1835,11 +1689,94 @@ footer {
         grid-template-columns: 1fr; /* Une seule colonne sur mobile */
     }
 
+      .introduction p {
+        font-size: 0.875rem;
+    }
+
 
  
 
+}
+
+
+
+
+@media (max-width: 478px) {
+
+
+    .portfolio-container {
+        grid-template-columns:repeat(1,350px);
+        justify-content: center;
+     
+    }
+    .portfolio-container img{
+        height: 200px;
+    
+    }
+}
+
+
+@media (max-width: 430px){
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .apropos-container .box {
+        min-width: 200px;
+        width: 200px;
+    }
+
+    .description  {
+   
+       white-space: wrap;
+        
+    }
+}
+
+
+
+
+
+@media (max-width: 360px) {
 
  
 
+    header.header-rest, header.header-home {
+        gap:10px;
+    }
 
+    
+    .logo img {
+        width: 30px;
+
+    }
+
+    .search-form input {
+        width: 120px;
+        font-size: 0.875rem;
+    }
+
+  
+    .menu-toggle {
+      
+        font-size: 30px;
+       
+    }
+
+    .portfolio-container {
+        grid-template-columns:repeat(1,250px);
+        
+     
+    } 
+    .portfolio-container img{
+        height: 180px;
+    
+    }
+    
 }
