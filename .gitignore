@@ -1,1 +1,12 @@
+# Fichiers générés par macOS
 .DS_Store
+
+# Fichiers générés par Windows
+Thumbs.db
+
+# Fichiers de logs
+*.log
+
+# Dossiers de build temporaires (si vous utilisez un outil de build comme Webpack, Gulp, etc.)
+/dist/
+/build/
