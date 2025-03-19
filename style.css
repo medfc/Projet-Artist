@@ -72,7 +72,7 @@ header {
 
 
 
-header a {
+.header-home a {
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -117,6 +117,9 @@ header a {
     padding-left: 200px;
   
 }
+
+
+
 
 .navigation-bar a:hover , .navigation-bar a.active{
     
@@ -568,6 +571,7 @@ flex-wrap: wrap;
 
 /* Tableau de colaboration */
 
+
 .collaboration-table {
     
     display: flex;
@@ -579,6 +583,11 @@ flex-wrap: wrap;
 
 }
 
+table caption {
+    font-size: 38.4px !important;
+    font-weight: bold;
+
+}
 
 .collaboration-table caption {
 
@@ -645,9 +654,7 @@ footer {
 }
 
 
-.newsletter h2 {
-    pad: 10px;
-}
+
 
 .newsletter form {
     display: flex;
@@ -759,15 +766,21 @@ footer {
 
 
 
+.header-rest {
+    background-color: white;
+}
+
+
 
 .header-rest a {
-
     color: black;
+    font-weight: bold;
+    text-decoration: none;
+
 }
 
-header.header-rest{
- background-color: white;
-}
+
+
 
 .work-with-me {
 
@@ -840,6 +853,10 @@ header.header-rest{
     
 
 }
+.portfolio-total h3 {
+
+    margin: 0;
+}
 .portfolio-container {
 
     display: grid;
@@ -849,7 +866,7 @@ header.header-rest{
     justify-content: center;
     text-align: left;
     gap:40px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     
 }
 
@@ -867,6 +884,7 @@ header.header-rest{
 .portfolio-container p {
     text-align: justify;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .portfolio-container h4 {
@@ -1126,16 +1144,13 @@ header.header-rest{
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);   
   
 }
-
 .apropos-container .box h3 {
-    font-size: 2rem;
-    color: #000;
-    
+    margin: 0px;
+  
 }
-
 
 .apropos-container .box p, .key-figures .stats p {
     color: #666;
@@ -1209,6 +1224,7 @@ header.header-rest{
     h2 {
 
         font-size: 2.25rem;
+        padding: 0px 20px;
     }
     h3 {
         font-size: 1.75rem;
@@ -1241,7 +1257,7 @@ header.header-rest{
         font-size: 0.95rem;
     }
   
-    .header-rest .navigation-bar {
+    header .navigation-bar {
         display: none; /* Caché par défaut */
         flex-direction: column;
         align-items: center;
@@ -1260,27 +1276,6 @@ header.header-rest{
     }
 
 
-    .header-home .navigation-bar {
-        display: none; /* Caché par défaut */
-        flex-direction: column;
-        align-items: center;
-        background: white;
-        width: 250px;  
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        position: absolute;
-        top: calc(100% + 5px);
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    }
-
-  
-    
-    
    .navigation-bar.active {
         display: flex !important;
         opacity: 1;
@@ -1307,11 +1302,7 @@ header.header-rest{
  
 
     }
-    .header-rest {
-        gap:250px;
-      
-
-        }
+  
 
     .search-form input {
         width: 120px;
@@ -1321,9 +1312,7 @@ header.header-rest{
         grid-template-columns:repeat(2,350px);
         gap:20px
     }
-    .portfolio-total h2 {
-        padding: 0px 20px;
-    }
+    
 
 
     .video-container video, .portfolio-container img {
@@ -1337,11 +1326,7 @@ header.header-rest{
         
     }
 
-    .portfolio-container p {
-        text-align:justify;
-        margin-bottom: 30px;
 
-    }
 
     .welcome-banner {
         height: 200px;
@@ -1434,7 +1419,7 @@ header.header-rest{
     max-width: 350px;
     }
 
-
+   
 }
 
 
@@ -1449,13 +1434,18 @@ header.header-rest{
     h1 {
         font-size: 2rem; 
     }
+    
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem ;
+        text-align: center;
+        margin: 0px 10px;
        
     }
+
     h3 {
-        font-size: 1.17rem;
+        font-size: 1.17rem ;
     }
+
     h4 {
         font-size: 1rem; 
     }
@@ -1548,10 +1538,7 @@ header.header-rest{
     .description h4{
         margin: 0;
     }
-    .realisation h2 {
-        text-align: center;
 
-    }
     .realisation-grid {
         grid-template-columns:  1fr;
     }
@@ -1560,9 +1547,7 @@ header.header-rest{
         margin: auto;
     }
 
-    .overview-portfolio h2 {
-        text-align: center;
-    }
+   
 
     .publications {
         flex-direction: column;
@@ -1646,13 +1631,6 @@ header.header-rest{
     }
     
     
-    .portfolio-total h2 {
-        margin: 0px 10px;
-    }
-
-
-
-
     .map-form {
 
         flex-direction: column;
@@ -1662,6 +1640,7 @@ header.header-rest{
         align-items: center;
         background-color: white ;
         gap:0;
+      
         
     }
     .map-container {
@@ -1681,22 +1660,39 @@ header.header-rest{
         padding-bottom: 20px;
     }  
 
-    .header-rest {
-    gap:70px;
-    }
-
-    .contact-info {
-        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
-    }
-
-      .introduction p {
+    .introduction p {
         font-size: 0.875rem;
     }
 
 
- 
+    
+    .contact-box {
+        width:70%;
+        min-width: 70%;
+        background: #f5f5f5;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        width:60%; 
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 70px;
+        
+       
+
+    }
 
 }
+
 
 
 
@@ -1718,14 +1714,8 @@ header.header-rest{
 
 @media (max-width: 430px){
 
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-        justify-content: center;
-        align-items: center;
+    
 
-    }
 
     .apropos-container .box {
         min-width: 200px;
@@ -1737,7 +1727,10 @@ header.header-rest{
        white-space: wrap;
         
     }
+
+
 }
+
 
 
 
@@ -1747,8 +1740,8 @@ header.header-rest{
 
  
 
-    header.header-rest, header.header-home {
-        gap:10px;
+    header {
+        gap:5px;
     }
 
     
@@ -1775,8 +1768,14 @@ header.header-rest{
      
     } 
     .portfolio-container img{
-        height: 180px;
+        height: 150px;
     
     }
+
+    .form-container button {
+        white-space: wrap;
+    }
     
+   
 }
+
