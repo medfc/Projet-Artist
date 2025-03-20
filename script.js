@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    /** 🔹 1️⃣ Gestion du menu burger */
+    /* 1- Gestion du menu burger */
+        let links = document.querySelectorAll(".navigation-bar a");
+        let currentPage = window.location.pathname.split("/").pop();
+        links.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+
+
+    /* 2- Gestion du menu burger */
     const menuToggle = document.querySelector(".menu-toggle"),
           navBar = document.querySelector(".navigation-bar");
 
@@ -20,7 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /** 🔹 2️⃣ Texte défilant */
+
+    /* 3- Texte défilant */
     const textElement = document.getElementById("scrolling-text");
     if (textElement) {
         let textContent = textElement.innerHTML, repetitions = 5;
@@ -38,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollText();
     }
 
-    /** 🔹 3️⃣ Carrousel */
+    /* 4- Carrousel */
     const slider = document.querySelector(".slider"),
           slides = document.querySelectorAll(".slide"),
           dots = document.querySelectorAll(".dot");
@@ -63,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoSlide();
     }
 
-    /** 🔹 4️⃣ Images du portfolio */
+    /* 5- Images du portfolio */
     const images = document.querySelectorAll(".portfolio-container img");
     if (images.length) {
         const overlay = document.createElement("div"),
@@ -83,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
     }
 
-    /** 🔹 5️⃣ Formulaire de contact */
+    /* 6- Formulaire de contact */
     const form = document.getElementById("contactForm");
     if (form) {
         form.addEventListener("submit", (event) => {
@@ -96,8 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /** 🔹 6️⃣ Gestion des vidéos */
-    
+    /* 7- Gestion des vidéos */
         const video = document.getElementById("video");
         const playButton = document.querySelector(".play-button"); // Utiliser querySelector pour récupérer le bouton correctement
     
@@ -125,6 +135,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 });
+
+
+
+
+
 
 
 
