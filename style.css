@@ -835,7 +835,12 @@ footer {
 }
 
 #portfolio-banner {
-    background-image: url(images/portfolio/portfolio-img.webp);
+    background-image: url('images/portfolio/banner-portfolio_1600.webp');
+     width:100%;
+    height:350px;
+    background-size: cover;
+    background-position: center;
+    
 }
 
 #anchor-portrait,#anchor-event,  #anchor-trip,  #anchor-editorial{
@@ -864,10 +869,10 @@ footer {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: repeat(2,500px);
+    grid-template-columns: repeat(2,650px);
     justify-content: center;
     text-align: left;
-    gap:40px;
+    gap:50px;
     margin-bottom: 40px;
     
 }
@@ -876,7 +881,7 @@ footer {
 .video-container video, .portfolio-container img {
 
     width:100%;
-    height: 350px;
+    height: 450px;
     object-fit: cover;
     cursor: pointer; /* Montre que l'image est cliquable */
     transition: transform 0.3s ease-in-out;
@@ -902,7 +907,7 @@ footer {
 .video-container video {
     display: block;
     width: 100%;
-    height: 350px;
+    height: 450px;
 }
 
 .video-container::before {
@@ -965,7 +970,12 @@ footer {
 
 
 #contact-banner {
-    background-image: url(images/contact/background-contact.webp);
+    background-image: url('images/contact/background-contact_1600.webp');
+    width:100%;
+    height:350px;
+    background-size: cover;
+    background-position: center;
+    
 }
 
 
@@ -1127,7 +1137,11 @@ footer {
 /* A PROPOS PAGE */
 
 #apropos-banner {
-    background-image: url(images/a-propos/background-a-propos.webp);
+    background-image: url('images/a-propos/background-a-propos_1600.webp');
+    width:100%;
+    height:350px;
+    object-fit: cover;
+    background-position: center;
 }
 
 .apropos-container {
@@ -1208,9 +1222,51 @@ footer {
 
 .key-figures .stats h3 {
     margin-bottom: 0;
+
 }
 
+/* L'overlay pour bloquer l'interaction avant l'acceptation des cookies */
+#cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    z-index: 10000; /* Au-dessus de tout le contenu */
+    display: none; /* Commence par être caché */
+    justify-content: center;
+    align-items: center;
+    pointer-events: all; /* Empêche toute interaction avec le site */
+}
 
+/* Bannière de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10001; /* Un peu plus haut que l'overlay pour qu'elle soit au-dessus */
+    font-size: 14px;
+}
+
+.cookie-banner button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
 
 
@@ -1396,6 +1452,7 @@ footer {
         width:80%;
     }
 
+
     .apropos-container {
     padding: 0px 10px;
     display: grid;
@@ -1426,7 +1483,12 @@ footer {
     max-width: 350px;
     }
 
-   
+    #apropos-banner, #contact-banner, #portfolio-banner {
+        background-image: none;
+    }
+
+
+    
 }
 
 
@@ -1695,9 +1757,17 @@ footer {
         align-items: center;
         gap: 40px;
         margin-bottom: 70px;
-        
-       
+   
+    }
 
+    #portfolio-banner {
+        background-image: url('images/portfolio/banner-portfolio_768.webp');
+    }
+    #contact-banner {
+        background-image: url('images/contact/background-contact_768.webp');
+    }
+    #apropos-banner {
+        background-image: url('images/a-propos/background-a-propos_768.webp');
     }
 
 }
@@ -1718,6 +1788,8 @@ footer {
         height: 200px;
     
     }
+
+
 }
 
 
@@ -1736,6 +1808,8 @@ footer {
        white-space: wrap;
         
     }
+
+
 
 
 }
@@ -1788,5 +1862,31 @@ footer {
     .contact-box h3 , .contact-box p {
         margin: 0;
     }
+
+
+    
+
+    
+
 }
 
+
+
+@media (max-width: 320px) {
+
+    #portfolio-banner {
+        background-image: url('images/portfolio/banner-portfolio_320.webp');
+    }
+
+    #apropos-banner {
+        background-image: url('images/a-propos/background-a-propos_320.webp');
+    }
+
+    #contact-banner {
+        background-image: url('images/contact/background-contact_320.webp');
+    }
+
+
+
+
+}

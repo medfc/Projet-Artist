@@ -1,175 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez Alban Kevin, photographe spécialisé en portraits, mariages et événements. Obtenez un devis ou posez vos questions. Disponible pour vos projets." />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contactez Alban Kevin, photographe spécialisé en portraits, mariages et événements. Obtenez un devis ou posez vos questions. Disponible pour vos projets." />
 
-    <link rel="icon" type="image/x-icon" class="favicon" href="images/index/site-favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap"></noscript>
-        
-    <title>Contact | Alban Kevin - Photographe Portrait, Mariage & Événementiel</title>
+        <link rel="icon" type="image/x-icon" class="favicon" href="images/index/site-favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap"></noscript>
+        <script src="script.js" defer></script>
 
-
-</head>
-
-
-<body>
-
-    <header class="header-rest">
-      
-        <div class="logo">
-            <a href="index.html" aria-label="Accueil">
-                <img src="images/index/web-log.svg" alt="Logo site" data-no-picture>
-            </a>
-
-        </div>
-
-        <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" role="button">&#9776;</button>
-        
-        <nav class="navigation-bar">
-            <a href="index.html">ACCUEIL</a>
-            <a href="portfolio.html">PORTFOLIO</a>
-            <a href="apropos.html">APROPOS</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
-
-        <div class="work-with-me">
-            <a href="mailto:medfc@yahoo.fr" >Rejoignez-nous!</a> 
-        </div>
-     
-    </header>
-
-   
-    <main>
-        <!-- Bannière de la page "contact" -->
-        <div id= "contact-banner" class="welcome-banner"> <h2>Contact</h2></div>
-
-        <!-- Section - informations de contact -->   
-        <section class="contact-info">
-            <div class="contact-box">
-                <div class="icon">📍</div>
-                <h3>Studio</h3>
-                <p>16 rue Ile de Napoleon</p>
-                <a href="https://maps.app.goo.gl/FiJXDDm2mpJMCEaF9" target="_blank">OBTENIR L'ITINÉRAIRE →</a>
-            </div>
-            <div class="contact-box">
-                <div class="icon">✉️</div>
-                <h3>Adresse e-mail</h3>
-                <p>medfc@yahoo.fr</p>
-                <a href="mailto:medfc@yahoo.fr">ENVOYER UN MESSAGE →</a>
-            </div>
-            <div class="contact-box">
-                <div class="icon">📞</div>
-                <h3>Numéro de téléphone</h3>
-                <p>+33 6 17 02 64 97</p>
-                <a href="tel:+33617026497">APPELER À TOUT MOMENT →</a>
-            </div>
-        </section>
-    
-        <!-- Section - carte google maps et formulaire de contact -->
-        <section class="map-form">
             
-            <!-- Carte google maps avec l'adresse de contact -->
-            <div class="map-container">
-                <a href="https://www.google.com/maps?q=16+rue+Ile+de+Napoleon" target="_blank">
-                    <img src="images/map-photo.webp" alt="Carte Google Maps - Cliquez pour voir l’itinéraire" class="map-image" loading="lazy">
+        <title>Contact | Alban Kevin - Photographe Portrait, Mariage & Événementiel</title>
+
+
+    </head>
+
+
+    <body>
+
+        <header class="header-rest">
+        
+            <div class="logo">
+                <a href="index.html" aria-label="Accueil">
+                    <img src="images/index/web-log.svg" alt="Logo site" data-no-picture>
                 </a>
-            </div> 
-
-            <!-- Formulaire de contact -->
-            <div class="form-container">
-                <h2>Un projet en tête ?</h2>  
-                <p>Génial ! Nous sommes impatients d'en savoir plus et de commencer ensemble.</p>
-                <form id="contactForm">
-                    <label for="name" class="visually-hidden">Nom</label>
-                    <input type="text" id="fullName" placeholder="Votre Nom" required>
-                    <label for="email-client" class="visually-hidden">Email</label>
-                    <input type="email" id="email-client" placeholder="Votre email" required>
-                    <label for="lien-site" class="visually-hidden">Nom</label>
-                    <input type="text" id="lien-site" placeholder="Votre site">
-                    <label for="message" class="visually-hidden">Message</label>
-                    <textarea id="message" placeholder="Comment puisse-je t'aider ?" required></textarea>
-                    <button type="submit">Envoyer Le Message</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- Texte défilant informatif -->
-        <div class="scrolling-text-container">
-            <p id="scrolling-text">
-                📸 Toutes vos envies en image ! Mariages, événements, portraits ... Nous réalisons votre projet photo sur-mesure. Contactez-nous !
-            </p>
-        </div>
-     
-    </main>
-
-
-    
-    <footer class="footer">
-
-        <div class=" footer-top">
-            <div class="newsletter-contact">
-                <div class="newsletter">
-               
-                    <h4> Nous suivre a travers nos ouvres et nos futures projets </h4>
-
-                    <form action="#" method="post">
-                        <input type="email" id="email-newsletter" name="email"  placeholder="Votre email ici" aria-label="Votre email" required>
-                        <button type="submit" class="arrow-button"> &#8599;</button><br>
-                    </form>
-                    
-                    <p> Rejoignez ma communauté et plongez dans mon univers visuel. Soyez informé(e) de mes nouvelles séries photographiques, expositions et inspirations.</p>  
-                </div>
-        
-        
-                <div class="contact"> 
-                    <h4>Contact</h4>
-                    <p> 16 rue Ile de Napoleon <br>
-                        +33 6 17 02 64 97 <br>
-                        68100 Mulhouse
-                    <p> 
-        
-                    <a href="mailto:medfc@yahoo.fr" aria-label="Envoyer un email">medfc@yahoo.fr</a>
-                    
-        
-                </div>
 
             </div>
-           
-    
-            <aside class="links"> 
-                <h4>Liens</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="apropos.html">Apropos </a></li>
 
-                </ul>
-            </aside>
-
-        </div>  
-        
-        
-        <hr class="footer-line"> 
-
-        <div class="footer-bottom">  
-            <p> Copyright &copy; 2025 Alban Kevin</p>
-            <div class="icone-footer-bottom">
-                <a href="https://www.facebook.com" aria-label="Page Facebook"><img src="images/index/facebook.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com" aria-label="Page Instagram" ><img src="images/index/instagram.png" alt="Instagram"></a>
-                <a href="https://x.com/?mx=2" aria-label="Page Twitter" ><img src="images/index/twitter.png" alt="Twitter"></a>
-                <a href="https://dribbble.com" aria-label="Page dribbble"><img src="images/index/reseau-social.png" alt="Dribbble"></a>
-
-            </div>
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" role="button">&#9776;</button>
             
-        </div>
+            <nav class="navigation-bar">
+                <a href="index.html">ACCUEIL</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="apropos.html">APROPOS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
 
-    </footer>
+            <div class="work-with-me">
+                <a href="mailto:medfc@yahoo.fr" >Rejoignez-nous!</a> 
+            </div>
+        
+        </header>
 
- <script src="script.js"></script>
-</body>
+    
+        <main>
+            <!-- Bannière de la page "contact" -->
+            <div id= "contact-banner" class="welcome-banner"> <h2>Contact</h2></div>
+
+            <!-- Section - informations de contact -->   
+            <section class="contact-info">
+                <div class="contact-box">
+                    <div class="icon">📍</div>
+                    <h3>Studio</h3>
+                    <p>16 rue Ile de Napoleon</p>
+                    <a href="https://maps.app.goo.gl/FiJXDDm2mpJMCEaF9" target="_blank">OBTENIR L'ITINÉRAIRE →</a>
+                </div>
+                <div class="contact-box">
+                    <div class="icon">✉️</div>
+                    <h3>Adresse e-mail</h3>
+                    <p>medfc@yahoo.fr</p>
+                    <a href="mailto:medfc@yahoo.fr">ENVOYER UN MESSAGE →</a>
+                </div>
+                <div class="contact-box">
+                    <div class="icon">📞</div>
+                    <h3>Numéro de téléphone</h3>
+                    <p>+33 6 17 02 64 97</p>
+                    <a href="tel:+33617026497">APPELER À TOUT MOMENT →</a>
+                </div>
+            </section>
+        
+            <!-- Section - carte google maps et formulaire de contact -->
+            <section class="map-form">
+                
+                <!-- Carte google maps avec l'adresse de contact -->
+                <div class="map-container">
+                    <a href="https://www.google.com/maps?q=16+rue+Ile+de+Napoleon" target="_blank">
+                        <img src="images/map-photo.webp" alt="Carte Google Maps - Cliquez pour voir l’itinéraire" class="map-image" loading="lazy">
+                    </a>
+                </div> 
+
+                <!-- Formulaire de contact -->
+                <div class="form-container">
+                    <h2>Un projet en tête ?</h2>  
+                    <p>Génial ! Nous sommes impatients d'en savoir plus et de commencer ensemble.</p>
+                    <form id="contactForm">
+                        <label for="name" class="visually-hidden">Nom</label>
+                        <input type="text" id="fullName" placeholder="Votre Nom" required>
+                        <label for="email-client" class="visually-hidden">Email</label>
+                        <input type="email" id="email-client" placeholder="Votre email" required>
+                        <label for="lien-site" class="visually-hidden">Nom</label>
+                        <input type="text" id="lien-site" placeholder="Votre site">
+                        <label for="message" class="visually-hidden">Message</label>
+                        <textarea id="message" placeholder="Comment puisse-je t'aider ?" required></textarea>
+                        <button type="submit">Envoyer Le Message</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Texte défilant informatif -->
+            <div class="scrolling-text-container">
+                <p id="scrolling-text">
+                    📸 Toutes vos envies en image ! Mariages, événements, portraits ... Nous réalisons votre projet photo sur-mesure. Contactez-nous !
+                </p>
+            </div>
+        
+        </main>
+
+
+        
+        <footer class="footer">
+
+            <div class=" footer-top">
+                <div class="newsletter-contact">
+                    <div class="newsletter">
+                
+                        <h4> Nous suivre a travers nos ouvres et nos futures projets </h4>
+
+                        <form action="#" method="post">
+                            <input type="email" id="email-newsletter" name="email"  placeholder="Votre email ici" aria-label="Votre email" required>
+                            <button type="submit" class="arrow-button"> &#8599;</button><br>
+                        </form>
+                        
+                        <p> Rejoignez ma communauté et plongez dans mon univers visuel. Soyez informé(e) de mes nouvelles séries photographiques, expositions et inspirations.</p>  
+                    </div>
+            
+            
+                    <div class="contact"> 
+                        <h4>Contact</h4>
+                        <p> 16 rue Ile de Napoleon <br>
+                            +33 6 17 02 64 97 <br>
+                            68100 Mulhouse
+                        <p> 
+            
+                        <a href="mailto:medfc@yahoo.fr" aria-label="Envoyer un email">medfc@yahoo.fr</a>
+                        
+            
+                    </div>
+
+                </div>
+            
+        
+                <aside class="links"> 
+                    <h4>Liens</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="apropos.html">Apropos </a></li>
+
+                    </ul>
+                </aside>
+
+            </div>  
+            
+            
+            <hr class="footer-line"> 
+
+            <div class="footer-bottom">  
+                <p> Copyright &copy; 2025 Alban Kevin</p>
+                <div class="icone-footer-bottom">
+                    <a href="https://www.facebook.com" aria-label="Page Facebook"><img src="images/index/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" aria-label="Page Instagram" ><img src="images/index/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/?mx=2" aria-label="Page Twitter" ><img src="images/index/twitter.png" alt="Twitter"></a>
+                    <a href="https://dribbble.com" aria-label="Page dribbble"><img src="images/index/reseau-social.png" alt="Dribbble"></a>
+
+                </div>
+                
+            </div>
+
+        </footer>
+
+
+    </body>
+
 </html>
