@@ -40,6 +40,7 @@ h4 {
 
 }
 
+   
 
 .favicon{
     width: 32px;
@@ -819,29 +820,38 @@ footer {
 
 
 .welcome-banner {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     width: 100%;
-    height: 350px;      
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 800;
-    letter-spacing: 5px;
+    aspect-ratio: 4 / 1; /* tu peux ajuster */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 80px;
-}
-
-#portfolio-banner {
-    background-image: url('images/portfolio/banner-portfolio_1600.webp');
-     width:100%;
-    height:350px;
-    background-size: cover;
-    background-position: center;
-    
-}
+  }
+  
+  .banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  
+  .welcome-banner h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0; /* important ! */
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+  
+  
+  
 
 #anchor-portrait,#anchor-event,  #anchor-trip,  #anchor-editorial{
     scroll-margin-top: 100px; /* Ajuste la marge pour que le titre soit bien visible */
@@ -868,7 +878,7 @@ footer {
 
     display: grid;
     width: 100%;
-    height: auto;
+    height: 1700px;
     grid-template-columns: repeat(2,650px);
     justify-content: center;
     text-align: left;
@@ -1390,11 +1400,11 @@ footer {
     }
 
 
-
+/* 
     .welcome-banner {
         height: 200px;
 
-    }
+    } */
 
    
     
@@ -1483,9 +1493,7 @@ footer {
     max-width: 350px;
     }
 
-    #apropos-banner, #contact-banner, #portfolio-banner {
-        background-image: none;
-    }
+
 
 
     
@@ -1760,9 +1768,9 @@ footer {
    
     }
 
-    #portfolio-banner {
+    /* #portfolio-banner {
         background-image: url('images/portfolio/banner-portfolio_768.webp');
-    }
+    } */
     #contact-banner {
         background-image: url('images/contact/background-contact_768.webp');
     }
@@ -1874,9 +1882,9 @@ footer {
 
 @media (max-width: 320px) {
 
-    #portfolio-banner {
+    /* #portfolio-banner {
         background-image: url('images/portfolio/banner-portfolio_320.webp');
-    }
+    } */
 
     #apropos-banner {
         background-image: url('images/a-propos/background-a-propos_320.webp');

@@ -194,25 +194,35 @@
             // Fonction pour charger les images Cloudinary
             function chargerImagesCloudinary() {
                 const images = document.querySelectorAll('.responsive-img');
-                images.forEach(img => {
-                    const baseUrl = img.getAttribute('data-base'); // Récupère le dossier de l'image
-                    const filename = img.getAttribute('data-file'); // Récupère le nom du fichier de l'image
-        
-                    // Si les attributs nécessaires sont présents, charger l'image depuis Cloudinary
+            
+                images.forEach((img, index) => {
+                    const baseUrl = img.getAttribute('data-base');
+                    const filename = img.getAttribute('data-file');
+            
                     if (baseUrl && filename) {
                         const srcset = `
                             https://res.cloudinary.com/${baseUrl}/image/upload/w_320,f_webp/${filename} 320w,
                             https://res.cloudinary.com/${baseUrl}/image/upload/w_768,f_webp/${filename} 768w,
                             https://res.cloudinary.com/${baseUrl}/image/upload/w_1024,f_webp/${filename} 1024w,
                             https://res.cloudinary.com/${baseUrl}/image/upload/w_1600,f_webp/${filename} 1600w
-                        `;
-                        img.srcset = srcset.trim();
+                        `.trim();
+            
                         img.src = `https://res.cloudinary.com/${baseUrl}/image/upload/w_320,f_webp/${filename}`;
-                        img.style.display = "block";  // Affiche l'image une fois chargée
+                        img.srcset = srcset;
+                        img.sizes = "100vw";
+                        img.decoding = "async";
+                        img.style.display = "block";
+            
+                        // ❗ Surtout pas de lazy loading sur la première image visible dans le viewport
+                        if (index > 0) {
+                            img.loading = "lazy";
+                        }
                     }
                 });
             }
-        
+            
+            window.addEventListener('DOMContentLoaded', chargerImagesCloudinary);
+            
         
 
 
