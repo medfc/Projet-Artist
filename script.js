@@ -222,7 +222,7 @@
             });
         }
 
-
+        
         // Pour être sûr que les images non liées au consentement soient chargées au bon moment
         window.addEventListener("DOMContentLoaded", () => {
             if (hasConsent) {
