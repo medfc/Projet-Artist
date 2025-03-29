@@ -160,68 +160,78 @@
         }
 
 
-        // 9- Gestion du consentement aux cookies et chargement des images Cloudinary
-            const overlay = document.getElementById("cookie-overlay");
-            const cookieBanner = document.getElementById("cookie-banner");
-            const acceptButton = document.getElementById("acceptCookiesBtn");
-        
-            // Vérifie si l'utilisateur a déjà accepté les cookies
-            const isConsentGiven = localStorage.getItem("cookiesAccepted");
-        
-            // Si le consentement est déjà donné, charger les images Cloudinary
-            if (isConsentGiven === "true") {
-                // Cache l'overlay et la bannière de cookies
-                overlay.style.display = "none"; 
-                cookieBanner.style.display = "none"; 
-                chargerImagesCloudinary(); // Charge les images Cloudinary
+
+
+
+
+        /* 8- GESTION DU CONSENTEMENT COOKIES + CHARGEMENT DES IMAGES CLOUDINARY */
+
+           
+        const overlay = document.getElementById("cookie-overlay");
+        const cookieBanner = document.getElementById("cookie-banner");
+        const acceptButton = document.getElementById("acceptCookiesBtn");
+
+        // Vérifie si l’utilisateur a déjà accepté les cookies
+        const hasConsent = localStorage.getItem("cookiesAccepted") === "true";
+
+            // Si l’utilisateur a donné son consentement, on cache la bannière et on charge les images
+            if (hasConsent) {
+                overlay.style.display = "none";
+                cookieBanner.style.display = "none";
+                chargerImagesCloudinary();
             } else {
-                // Sinon, montre l'overlay et la bannière
-                overlay.style.display = "flex"; 
-                cookieBanner.style.display = "flex"; 
-            }
-        
-            // Gérer le clic sur le bouton d'acceptation des cookies
-            if (acceptButton) {
-                acceptButton.addEventListener("click", () => {
-                    // Enregistre que l'utilisateur a accepté les cookies
-                    localStorage.setItem("cookiesAccepted", "true");
-                    overlay.style.display = "none";  // Cache l'overlay
-                    cookieBanner.style.display = "none";  // Cache la bannière
-                    chargerImagesCloudinary();  // Charge les images Cloudinary après l'acceptation
-                });
-            }
-        
-            // Fonction pour charger les images Cloudinary
-            function chargerImagesCloudinary() {
-                const images = document.querySelectorAll('.responsive-img');
-            
-                images.forEach((img, index) => {
-                    const baseUrl = img.getAttribute('data-base');
-                    const filename = img.getAttribute('data-file');
-            
-                    if (baseUrl && filename) {
-                        const srcset = `
-                            https://res.cloudinary.com/${baseUrl}/image/upload/w_320,f_webp/${filename} 320w,
-                            https://res.cloudinary.com/${baseUrl}/image/upload/w_768,f_webp/${filename} 768w,
-                            https://res.cloudinary.com/${baseUrl}/image/upload/w_1024,f_webp/${filename} 1024w,
-                            https://res.cloudinary.com/${baseUrl}/image/upload/w_1600,f_webp/${filename} 1600w
-                        `.trim();
-            
-                        img.src = `https://res.cloudinary.com/${baseUrl}/image/upload/w_320,f_webp/${filename}`;
-                        img.srcset = srcset;
-                        img.sizes = "100vw";
-                        img.decoding = "async";
-                        img.style.display = "block";
-            
-                        // ❗ Surtout pas de lazy loading sur la première image visible dans le viewport
-                        if (index > 0) {
-                            img.loading = "lazy";
-                        }
+                    // Sinon, on affiche la bannière
+                    overlay.style.display = "flex";
+                    cookieBanner.style.display = "flex";
+
+                    // Et on écoute le clic sur le bouton "Accepter"
+                    if (acceptButton) {
+                        acceptButton.addEventListener("click", () => {
+                        localStorage.setItem("cookiesAccepted", "true");
+                        overlay.style.display = "none";
+                        cookieBanner.style.display = "none";
+                        chargerImagesCloudinary();
+                        });
                     }
-                });
+                }
+
+        /* 9- Fonction qui charge dynamiquement les images Cloudinary */
+
+        function chargerImagesCloudinary() {
+        const images = document.querySelectorAll(".responsive-img");
+
+            images.forEach((img) => {
+                const base = img.getAttribute("data-base");
+                const file = img.getAttribute("data-file");
+
+                if (base && file) {
+                const baseUrl = `https://res.cloudinary.com/${base}/image/upload`;
+
+                img.src = `${baseUrl}/w_320,f_webp/${file}`;
+                img.srcset = `
+                    ${baseUrl}/w_320,f_webp/${file} 320w,
+                    ${baseUrl}/w_768,f_webp/${file} 768w,
+                    ${baseUrl}/w_1024,f_webp/${file} 1024w,
+                    ${baseUrl}/w_1600,f_webp/${file} 1600w
+                `.trim();
+                img.sizes = "100vw";
+                img.loading = "lazy";
+                img.decoding = "async";
+                img.style.display = "block"; // Débloque l’image si elle était masquée par défaut
+                }
+            });
+        }
+
+
+        // Pour être sûr que les images non liées au consentement soient chargées au bon moment
+        window.addEventListener("DOMContentLoaded", () => {
+            if (hasConsent) {
+                chargerImagesCloudinary();
             }
+        });
+
             
-            window.addEventListener('DOMContentLoaded', chargerImagesCloudinary);
+
             
         
 
