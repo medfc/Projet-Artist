@@ -292,7 +292,8 @@ header {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
-    width: 70%;
+    width: 80%;
+    height: auto;
     margin-bottom: 80px;
     
 } 
@@ -316,7 +317,8 @@ header {
 
 .realisation-box img {
     
-    width:100%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 
 }
@@ -871,7 +873,7 @@ footer {
 
 }
 .portfolio-total h3 {
-    
+
     margin: 0;
     padding: 0px 10px;
 }
@@ -1267,6 +1269,12 @@ footer {
     align-items: center;
     z-index: 10001; /* Un peu plus haut que l'overlay pour qu'elle soit au-dessus */
     font-size: 14px;
+    text-align: justify;
+    
+}
+
+.cookie-banner p {
+    margin-right: 20px;
 }
 
 .cookie-banner button {
@@ -1446,11 +1454,7 @@ footer {
         margin-top: 20px;
     }
 
-    .realisation-grid {
-       
-        width: 90%;
-        
-    } 
+
 
     .publications{
         width: 75%;
@@ -1619,14 +1623,15 @@ footer {
 
     .realisation-grid {
         grid-template-columns:  1fr;
+        min-width: 200px;
     }
+
     .realisation-box  {
-        width:80%;
+      
         margin: auto;
     }
 
    
-
     .publications {
         flex-direction: column;
         width: 90%;
@@ -1895,6 +1900,14 @@ footer {
         background-image: url('images/contact/background-contact_320.webp');
     }
 
+    .cookie-banner {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .cookie-banner p {
+        margin: 10px;
+    }
 
 
 

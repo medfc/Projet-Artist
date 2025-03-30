@@ -164,9 +164,8 @@
 
 
 
-        /* 8- GESTION DU CONSENTEMENT COOKIES + CHARGEMENT DES IMAGES CLOUDINARY */
+        /* 8- GESTION DU CONSENTEMENT COOKIES + CHARGEMENT DES IMAGES l CLOUDINARY */
 
-           
         const overlay = document.getElementById("cookie-overlay");
         const cookieBanner = document.getElementById("cookie-banner");
         const acceptButton = document.getElementById("acceptCookiesBtn");
@@ -174,63 +173,88 @@
         // Vérifie si l’utilisateur a déjà accepté les cookies
         const hasConsent = localStorage.getItem("cookiesAccepted") === "true";
 
-            // Si l’utilisateur a donné son consentement, on cache la bannière et on charge les images
-            if (hasConsent) {
-                overlay.style.display = "none";
-                cookieBanner.style.display = "none";
-                chargerImagesCloudinary();
-            } else {
-                    // Sinon, on affiche la bannière
-                    overlay.style.display = "flex";
-                    cookieBanner.style.display = "flex";
+        // Si l’utilisateur a donné son consentement, on cache la bannière et on charge les images LCP
+        if (hasConsent) {
+            overlay.style.display = "none";
+            cookieBanner.style.display = "none";
+            preloadImagesLCP();  // Précharger les images LCP après consentement
+        } else {
+            // Sinon, on affiche la bannière
+            overlay.style.display = "flex";
+            cookieBanner.style.display = "flex";
 
-                    // Et on écoute le clic sur le bouton "Accepter"
-                    if (acceptButton) {
-                        acceptButton.addEventListener("click", () => {
-                        localStorage.setItem("cookiesAccepted", "true");
-                        overlay.style.display = "none";
-                        cookieBanner.style.display = "none";
-                        chargerImagesCloudinary();
-                        });
-                    }
-                }
+            // Et on écoute le clic sur le bouton "Accepter"
+            if (acceptButton) {
+                acceptButton.addEventListener("click", () => {
+                    localStorage.setItem("cookiesAccepted", "true");
+                    overlay.style.display = "none";
+                    cookieBanner.style.display = "none";
+                    preloadImagesLCP();  // Précharger les images LCP après consentement
+                });
+            }
+        }
+
 
         /* 9- Fonction qui charge dynamiquement les images Cloudinary */
-
         function chargerImagesCloudinary() {
-        const images = document.querySelectorAll(".responsive-img");
+            const images = document.querySelectorAll(".responsive-img");
 
             images.forEach((img) => {
                 const base = img.getAttribute("data-base");
                 const file = img.getAttribute("data-file");
+                const consent = img.getAttribute("data-cookieconsent");
 
-                if (base && file) {
-                const baseUrl = `https://res.cloudinary.com/${base}/image/upload`;
+                // Vérifie si l'image est associée à un consentement spécifique (par exemple marketing)
+                if (base && file && (consent === "marketing" || !consent)) {
+                    const baseUrl = `https://res.cloudinary.com/${base}/image/upload`;
 
-                img.src = `${baseUrl}/w_320,f_webp/${file}`;
-                img.srcset = `
-                    ${baseUrl}/w_320,f_webp/${file} 320w,
-                    ${baseUrl}/w_768,f_webp/${file} 768w,
-                    ${baseUrl}/w_1024,f_webp/${file} 1024w,
-                    ${baseUrl}/w_1600,f_webp/${file} 1600w
-                `.trim();
-                img.sizes = "100vw";
-                img.loading = "lazy";
-                img.decoding = "async";
-                img.style.display = "block"; // Débloque l’image si elle était masquée par défaut
+                    img.src = `${baseUrl}/w_320,f_webp/${file}`;
+                    img.srcset = `
+                        ${baseUrl}/w_320,f_webp/${file} 320w,
+                        ${baseUrl}/w_768,f_webp/${file} 768w,
+                        ${baseUrl}/w_1024,f_webp/${file} 1024w,
+                        ${baseUrl}/w_1600,f_webp/${file} 1600w
+                    `.trim();
+                    img.sizes = "100vw";
+                    img.loading = "lazy";
+                    img.decoding = "async";
+                    img.style.display = "block"; // Débloque l’image si elle était masquée par défaut
                 }
             });
         }
 
-        
+        // 10- Fonction pour précharger les images critiques LCP après consentement
+        function preloadImagesLCP() {
+            const consentGiven = localStorage.getItem("cookiesAccepted") === "true";
+
+            if (consentGiven) {
+                // Précharger la première image LCP avec fetchpriority="high"
+                const preloadLink1 = document.createElement('link');
+                preloadLink1.rel = 'preload';
+                preloadLink1.as = 'image';
+                preloadLink1.href = 'https://res.cloudinary.com/dai5sffyc/image/upload/w_768,f_auto,q_auto/banner-portfolio_pimjwi.webp';
+                preloadLink1.type = 'image/webp';
+                preloadLink1.fetchpriority = 'high'; // Priorité élevée pour le LCP
+                document.head.appendChild(preloadLink1);
+
+                // Précharger la deuxième image LCP avec fetchpriority="high"
+                const preloadLink2 = document.createElement('link');
+                preloadLink2.rel = 'preload';
+                preloadLink2.as = 'image';
+                preloadLink2.href = 'https://res.cloudinary.com/dai5sffyc/image/upload/f_auto,q_auto,w_768/v1743245140/prt-1_ty6pn6.webp';
+                preloadLink2.type = 'image/webp';
+                preloadLink2.fetchpriority = 'high'; // Priorité élevée pour le LCP
+                document.head.appendChild(preloadLink2);
+            }
+        }
+
         // Pour être sûr que les images non liées au consentement soient chargées au bon moment
         window.addEventListener("DOMContentLoaded", () => {
             if (hasConsent) {
-                chargerImagesCloudinary();
+                preloadImagesLCP();  // Précharger les images LCP après consentement
+                chargerImagesCloudinary();    // Charger les autres images après consentement
             }
         });
-
-            
 
             
         

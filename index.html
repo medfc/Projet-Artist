@@ -7,11 +7,14 @@
         <meta name="description" content="Explorez le portfolio d'Alban Kevin, photographe passionné. Découvrez des portraits captivants, des voyages inoubliables et des photographies éditoriales d'exception.">
         <link rel="icon" type="image/x-icon" class="favicon" href="images/index/site-favicon.ico">
         <link rel="stylesheet" href="style.css">
+        <!-- Préchargement portrait artiste - font google -->
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap"></noscript>
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap&family=Montserrat:wght@400;700&display=swap"></noscript>
+        <link rel="preload" href="images/index/portrait artiste.webp" as="image" fetchpriority="high">
+        <!-- Ajout du scrip JS -->
         <script src="script.js" defer></script>
-        <link rel="preload" as="image" href="images/index/portrait-artiste.webp" type="image/webp">
-
+        
+        
         <title>Accueil | Alban Kevin - Photographe Portrait, Mariage & Événementiel</title>
     
     </head>
@@ -22,9 +25,7 @@
 
           <!-- Le logo -->
             <div class="logo">
-                <a href="index.html" aria-label="Accueil">
-                    <img src="images/index/web-log.svg" alt="Logo site" data-no-picture>
-                </a>
+                <a href="index.html" aria-label="Accueil"> <img src="images/index/web-log.svg" alt="Logo site" width="32" height="32" data-no-picture> </a>
             </div>
         
 
@@ -58,7 +59,7 @@
                 <div class=" introduction ">
                     <h1>Chaque couleur <br><span>raconte une histoire</span></h1> 
                     <h2>Introduction</h2>
-                    <p>
+                    <p fetchpriority="high">
                         Je suis Alban Kevin, photographe passionné spécialisé dans les portraits et la photographie urbaine. Mon objectif est de capturer des moments authentiques et de révéler la beauté cachée du quotidien.
                     </p>
                 
@@ -68,8 +69,7 @@
                 </div>
 
                 <!-- Image du photographe en introduction -->
-                <img class="responsive-img" data-base="dai5sffyc" data-file="portrait_artiste_qi1qtb.webp" alt="portrait de l’artiste" loading="lazy">
-                
+                <img src="images/index/portrait artiste.webp" alt="portrait Artiste" fetchpriority="high">
             </article>
 
           
@@ -88,17 +88,15 @@
 
                     <!-- Bloc de réalisation 1 - Portraits -->
                     <div class="realisation-box">
-                    
-                        <img class="responsive-img" data-base="dai5sffyc" data-file="portrait-acceuil_nsnxll.webp" alt="Portrait d’un homme souriant en chemise à motifs devant un fond clair." loading="lazy">
+                        <img class="responsive-img" data-base="dai5sffyc" data-file="portrait-acceuil_nsnxll.webp" data-cookieconsent="marketing" alt="Portrait d’un homme souriant en chemise à motifs devant un fond clair." loading="lazy" width="550" height="350">
                         <div class="description">
                             <h3>Portraits</h3>
                             <a href="portfolio.html#anchor-portrait" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
                         </div>
-
                     </div>
                     <!-- Bloc de réalisation 2 - Voyage -->
                     <div class="realisation-box">
-                        <img class="responsive-img" data-base="dai5sffyc" data-file="voyage-acceuil_tyws8b.webp" alt="Paysage naturel avec roches rouges, forêts et montagnes en arrière-plan." loading="lazy">
+                        <img class="responsive-img" data-base="dai5sffyc" data-file="voyage-acceuil_tyws8b.webp" data-cookieconsent="marketing" alt="Image représentant un paysage de voyage avec des éléments naturels." loading="lazy" width="550" height="350">
                         <div class="description">
                             <h3>Villes & voyage</h3>
                             <a href="portfolio.html#anchor-trip" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
@@ -106,7 +104,7 @@
                     </div>
                     <!-- Bloc de réalisation 3 - Editorial-->
                     <div class="realisation-box">
-                        <img class="responsive-img" data-base="dai5sffyc" data-file="mode-acceuil_xsnzyd.webp" alt="Femme élégante avec lunettes de soleil portant plusieurs sacs de shopping." loading="lazy">
+                        <img class="responsive-img" data-base="dai5sffyc" data-file="mode-acceuil_xsnzyd.webp" data-cookieconsent="marketing" alt="Image représentant une personne portant un vêtement à la mode dans un cadre moderne." loading="lazy" width="550" height="350">
                         <div class="description">
                             <h3>Mode & Editorial</h3>
                             <a href="portfolio.html#anchor-editorial" aria-label="Voir les détails des portraits">VOIR EN DETAIL→</a>
@@ -114,7 +112,7 @@
                     </div>
                     <!-- Bloc de réalisation 4 - Evénements -->
                     <div class="realisation-box">
-                        <img class="responsive-img" data-base="dai5sffyc" data-file="reportage-acceuil_oecfv6.webp" alt="Groupe de personnes partageant un repas convivial en terrasse." loading="lazy">
+                        <img class="responsive-img" data-base="dai5sffyc" data-file="reportage-acceuil_oecfv6.webp" data-cookieconsent="marketing" alt="Groupe de personnes partageant un repas convivial en terrasse." loading="lazy" width="550" height="350">
                         <div class="description">
                             <h3>Reportages & Evénements</h3>
                             <a href="portfolio.html#anchor-event" aria-label="Voir les détails des portraits">VOIR EN DETAIL →</a>
@@ -124,7 +122,7 @@
                 </div>
             </section>
 
-              <!-- Aperçu sur les realisations dans un slider -->
+            <!-- Aperçu sur les realisations dans un slider -->
             <section class="overview-portfolio">
                 <h2>Un Aperçu sur nos meilleures œuvres </h2>
                 <div class="slider-container">
@@ -190,9 +188,9 @@
             </section>
 
 
-             <!-- Section video -->
-             <div class="presentation-video">
-                <video id="video" class="presentation" controls width="800" height="450" loading="lazy" poster="video/video-mariage-poster.jpg">
+            <!-- Section video -->
+            <div class="presentation-video">
+                <video id="video" class="presentation" controls width="800" height="450" loading="lazy" poster="video/video-mariage-poster.webp">
                     <source src="video/video-mariage.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de cette vidéo.
                 </video>
@@ -201,7 +199,7 @@
                 </button>
             </div>  
 
-            <!-- les collaborations -->
+            <!-- Les collaborations -->
             <table class="collaboration-table">
 
                 <caption> Collaborations </caption> 
@@ -229,7 +227,7 @@
                 
             </table>
 
-            <!-- rentrer en contact avec nous -->
+            <!-- Rentrer en contact avec nous -->
             <section class="talk-with-us"> 
                 <h2> Créons quelque chose de grand !</h2>
                 <p> Nous vous faisons passer de la réalité d'aujourd'hui au potentiel de demain </p>
@@ -269,7 +267,7 @@
 
                 </div>
             
-                 <!-- ligne de navigation -->  
+                 <!-- Ligne de navigation -->  
                 <aside class="links"> 
                     <h3>Liens</h3>
                     <ul>
@@ -280,23 +278,40 @@
                 </aside>
 
             </div>
-            <!-- ligne horizontale -->
+            <!-- Ligne horizontale -->
             <hr class="footer-line"> 
 
             <div class="footer-bottom">  
 
                 <p> Copyright &copy; 2025 Alban Kevin</p>
                 <div class="icone-footer-bottom">
-                    <a href="https://www.facebook.com" aria-label="Page Facebook"><img src="images/index/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com" aria-label="Page Instagram" ><img src="images/index/instagram.png" alt="Instagram"></a>
-                    <a href="https://x.com/?mx=2" aria-label="Page Twitter" ><img src="images/index/twitter.png" alt="Twitter"></a>
-                    <a href="https://dribbble.com" aria-label="Page dribbble"><img src="images/index/reseau-social.png" alt="Dribbble"></a>
+                    <a href="https://www.facebook.com" aria-label="Page Facebook">
+                        <img src="images/index/facebook.webp" alt="Logo Facebook" width="32" height="32" loading="lazy" decoding="async">
+                    </a>
+                    <a href="https://www.instagram.com" aria-label="Page Instagram">
+                        <img src="images/index/instagram.webp" alt="Logo Instagram" width="32" height="32" loading="lazy" decoding="async">
+                    </a>
+                    <a href="https://x.com/?mx=2" aria-label="Page X (anciennement Twitter)">
+                        <img src="images/index/twitter.webp" alt="Logo X / Twitter" width="32" height="32" loading="lazy" decoding="async">
+                    </a>
+                     <a href="https://dribbble.com" aria-label="Page Dribbble">
+                        <img src="images/index/dribbled.webp" alt="Logo Dribbble" width="32" height="32" loading="lazy" decoding="async">
+                    </a>
                 </div>
                 
             </div>
 
     
         </footer>
+
+        <!-- Overlay pour bloquer les interactions avant le consentement -->
+        <!-- Bannière de cookies -->
+        <div id="cookie-banner" class="cookie-banner">
+            <p>Ce site utilise des cookies tiers pour améliorer votre expérience. Acceptez-vous les cookies ?</p>
+            <button id="acceptCookiesBtn">J'ai compris</button>
+            </div>
+    
+            <div id="cookie-overlay" class="overlay"></div>
 
     </body>
 
