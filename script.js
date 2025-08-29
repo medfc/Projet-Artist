@@ -40,11 +40,11 @@
         const scrollingTextElement = document.getElementById("scrolling-text");
         if (scrollingTextElement) {
             const textContent = scrollingTextElement.innerHTML;
-            const repetitions = 5;  // Répéter le texte 5 fois pour l'effet
+            const repetitions = 5;  
             scrollingTextElement.innerHTML = Array(repetitions).fill(textContent).join(" &nbsp;&nbsp;&nbsp;&nbsp; ");
 
             let position = 0;
-            const speed = 1; // Vitesse de défilement du texte
+            const speed = 1; 
             const scrollText = () => {
                 position -= speed;
                 if (position <= -scrollingTextElement.scrollWidth / repetitions) {
@@ -119,16 +119,15 @@
             form.addEventListener("submit", (event) => {
                 event.preventDefault();  // Empêche le comportement par défaut (rechargement de la page)
                 
-                const fullName = document.getElementById("fullName").value;  // Récupère la valeur du champ "Nom"
-                const email = document.getElementById("email-client").value;  // Utilise l'ID "email-client" pour récupérer l'email
-                const message = document.getElementById("message").value;  // Récupère la valeur du champ "Message"
+                const fullName = document.getElementById("fullName").value;  
+                const email = document.getElementById("email-client").value; 
+                const message = document.getElementById("message").value;  
         
-                // Vérifie que tous les champs sont remplis
                 if (fullName && email && message) {
                     alert("Votre message a été envoyé !");
-                    form.reset();  // Réinitialise le formulaire après envoi
+                    form.reset();  
                 } else {
-                    alert("Veuillez remplir tous les champs.");  // Si un champ est vide, affiche un message d'alerte
+                    alert("Veuillez remplir tous les champs.");  
                 }
             });
         }
@@ -170,14 +169,14 @@
         const cookieBanner = document.getElementById("cookie-banner");
         const acceptButton = document.getElementById("acceptCookiesBtn");
 
-        // Vérifie si l’utilisateur a déjà accepté les cookies
+        
         const hasConsent = localStorage.getItem("cookiesAccepted") === "true";
 
         // Si l’utilisateur a donné son consentement, on cache la bannière et on charge les images LCP
         if (hasConsent) {
             overlay.style.display = "none";
             cookieBanner.style.display = "none";
-            preloadImagesLCP();  // Précharger les images LCP après consentement
+            preloadImagesLCP();  
         } else {
             // Sinon, on affiche la bannière
             overlay.style.display = "flex";
@@ -189,7 +188,7 @@
                     localStorage.setItem("cookiesAccepted", "true");
                     overlay.style.display = "none";
                     cookieBanner.style.display = "none";
-                    preloadImagesLCP();  // Précharger les images LCP après consentement
+                    preloadImagesLCP();  
                 });
             }
         }
@@ -204,7 +203,7 @@
                 const file = img.getAttribute("data-file");
                 const consent = img.getAttribute("data-cookieconsent");
 
-                // Vérifie si l'image est associée à un consentement spécifique (par exemple marketing)
+                // Vérifie si l'image est associée à un consentement spécifique 
                 if (base && file && (consent === "marketing" || !consent)) {
                     const baseUrl = `https://res.cloudinary.com/${base}/image/upload`;
 
@@ -234,7 +233,7 @@
                 preloadLink1.as = 'image';
                 preloadLink1.href = 'https://res.cloudinary.com/dai5sffyc/image/upload/w_768,f_auto,q_auto/banner-portfolio_pimjwi.webp';
                 preloadLink1.type = 'image/webp';
-                preloadLink1.fetchpriority = 'high'; // Priorité élevée pour le LCP
+                preloadLink1.fetchpriority = 'high'; 
                 document.head.appendChild(preloadLink1);
 
                 // Précharger la deuxième image LCP avec fetchpriority="high"
@@ -243,7 +242,7 @@
                 preloadLink2.as = 'image';
                 preloadLink2.href = 'https://res.cloudinary.com/dai5sffyc/image/upload/f_auto,q_auto,w_768/v1743245140/prt-1_ty6pn6.webp';
                 preloadLink2.type = 'image/webp';
-                preloadLink2.fetchpriority = 'high'; // Priorité élevée pour le LCP
+                preloadLink2.fetchpriority = 'high'; 
                 document.head.appendChild(preloadLink2);
             }
         }
@@ -251,8 +250,8 @@
         // Pour être sûr que les images non liées au consentement soient chargées au bon moment
         window.addEventListener("DOMContentLoaded", () => {
             if (hasConsent) {
-                preloadImagesLCP();  // Précharger les images LCP après consentement
-                chargerImagesCloudinary();    // Charger les autres images après consentement
+                preloadImagesLCP(); 
+                chargerImagesCloudinary();    
             }
         });
 
