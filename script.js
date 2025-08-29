@@ -189,6 +189,7 @@
                     overlay.style.display = "none";
                     cookieBanner.style.display = "none";
                     preloadImagesLCP();  
+                    chargerImagesCloudinary();
                 });
             }
         }
